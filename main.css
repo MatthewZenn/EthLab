@@ -1,0 +1,129 @@
+:root {
+  --background: white;
+  --secondary: rgb(245, 249, 255);
+  --accent: #174AE4;
+}
+
+body, html{
+  background-color: var(--secondary);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: var(--background);
+  border-bottom: 2px solid var(--accent);
+}
+
+#logo {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  height: 30px;
+}
+
+#run {
+  position: relative;
+  top: 0px;
+  left: 30px;
+  height: 35px;
+  width: 120px;
+  background-color: transparent;
+  color: var(--accent);
+  font-size: 12pt;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  transition-duration: 0.25s;
+  text-align: center;
+  cursor: pointer;
+}
+
+#run span {
+  vertical-align: middle;
+}
+
+#run:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+#copy {
+  position: relative;
+  top: 0px;
+  left: 30px;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  color: var(--accent);
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.25s;
+  text-align: center;
+  cursor: pointer;
+}
+
+#copy span {
+  vertical-align: middle;
+}
+
+#copy:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+#textcontainer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 95%;
+  width: 50%;
+  display: block;
+  font-family: Consolas, "Courier New", Courier, monospace;
+  background-color: var(--background);
+  z-index: -1;
+  border-right: 1px solid var(--accent);
+  overflow: hidden;
+  }
+  
+  #editor {
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--background);
+  color: black;
+  font-size: 12pt;
+  outline: none;
+  border: none;
+  resize: none;
+  padding-left: 5px;
+  padding-top: 10px;
+  display: block;
+  overflow: hidden;
+  font-family: Consolas, 'Courier New', Courier, monospace;
+  }
+  
+  #numbers {
+  position: absolute;
+  width: 20px;
+  left: 10px;
+  top: 0;
+  font-size: 12pt;
+  padding-top: 10px;
+  text-align: right;
+  font-family: Consolas, 'Courier New', Courier, monospace;
+  }
+  
+  #numbers span {
+  counter-increment: linenumber;
+  }
+  
+  #numbers span::before {
+  content: counter(linenumber);
+  display: block;
+  color: rgb(196, 196, 196);
+  }
