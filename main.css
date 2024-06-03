@@ -74,6 +74,30 @@ header {
   color: white;
 }
 
+#reset {
+  position: relative;
+  top: 0px;
+  left: 30px;
+  height: 35px;
+  width: 35px;
+  background-color: transparent;
+  color: var(--accent);
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.25s;
+  text-align: center;
+  cursor: pointer;
+}
+
+#reset span {
+  vertical-align: middle;
+}
+
+#reset:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
 #textcontainer {
   position: absolute;
   bottom: 0px;
